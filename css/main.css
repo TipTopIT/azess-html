@@ -1,0 +1,66 @@
+html, body {
+  background-color: #000;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  color: #ffffff; }
+
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  display: flex; }
+
+section {
+  display: flex;
+  height: 100%;
+  background-image: url("../images/section-bg-2.jpg");
+  background-size: cover; }
+  section > div {
+    padding: 10px;
+    box-sizing: border-box; }
+    section > div.box {
+      height: 100%;
+      position: relative; }
+  section.animate-block > .box:after {
+    background-color: #000000;
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    display: block;
+    content: ' ';
+    top: 0px;
+    transition-property: width;
+    transition-timing-function: linear;
+    transition-duration: 1000ms;
+    z-index: 50; }
+  section.animate-block > .box:first-child:after {
+    left: 0px; }
+  section.animate-block > .box:last-child:after {
+    right: 0px; }
+  section.animate-block > .box .box-content {
+    opacity: 0;
+    position: relative;
+    z-index: 100;
+    transition-duration: 500ms;
+    transition-property: opacity;
+    transition-delay: 1000ms; }
+  section.animate-block-active > .box:first-child:after {
+    width: 50%; }
+  section.animate-block-active > .box:last-child:after {
+    width: 100%; }
+  section.animate-block-active > .box .box-content {
+    opacity: 1; }
+  section.animate-block-reverse > .box:first-child:after {
+    left: auto;
+    right: 0px;
+    width: 100%; }
+  section.animate-block-reverse > .box:last-child:after {
+    width: 100%;
+    left: 0px; }
+  section.animate-block-reverse.animate-block-active > .box:first-child:after {
+    width: 50%; }
+  section.animate-block-reverse.animate-block-active > .box:last-child:after {
+    width: 0px; }
+
+/*# sourceMappingURL=main.css.map */
