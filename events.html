@@ -9,12 +9,10 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/hamburger.css" rel="stylesheet"/>
-    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slider.css" rel="stylesheet">
     <link href="lib/onepage-scroll/onepage-scroll.css" rel="stylesheet">
     <link href="lib/select2/css/select2.css" rel="stylesheet">
-
     <link rel="stylesheet" href="css/main.css"/>
-
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -65,7 +63,6 @@
 </header>
 
 <div class="wrap">
-
     <section class="content-list">
         <div class="box">
             <div class="box-content">
@@ -96,49 +93,98 @@
                         </div>
                     </div>
                     </form>
+                    <div class="events-filter">
+                        <a class="btn btn-primary" href="">Ближайшие мероприятия</a>
+                        <a  class="btn btn-primary btn-active" href="#">Прощедшие мероприятия</a>
+                    </div>
                 </div>
+
             </div>
         </div>
         <div class="box">
             <div class="box-content">
                 <div class="events">
-                    <div class="events-item">
-                        <a href="#" class="">
-                            <img src="images/slider/test1.png" alt="Первый слайд">
-                            <div class="events-item-info">
-                                <h3 class="event-title">Прошел селекционный отбор</h3>
-                                <span class="event-date">12 декабря</span>
+                    <div class="slider">
+                        <div class="slider__wrapper">
+
+                            <div class="slider__item">
+                                <div class="events-item">
+                                    <img src="images/slider/test1.png"/>
+                                    <div class="events-item-info">
+                                        <a href="event-item.html">
+                                            <h3 class="events-item-title">Прошел селекционный отбор</h3>
+                                        </a>
+                                        <span class="events-item-date">12 декабря</span>
+                                        <a href="#" class="events-item-btn">
+                                            Записаться
+                                        </a>
+                                    </div>
+
+                                </div>
                             </div>
-                        </a>
-                    </div>
-                    <div class="events-item">
-                        <a href="#" class="">
-                            <img src="images/slider/test1.png" alt="Первый слайд">
-                            <div class="events-item-info">
-                                <h3 class="event-title">Прошел селекционный отбор</h3>
-                                <span class="event-date">12 декабря</span>
+                            <div class="slider__item">
+                                <div class="events-item">
+                                    <img src="images/slider/test1.png"/>
+                                    <div class="events-item-info">
+                                        <a href="event-item.html">
+                                            <h3 class="events-item-title">Прошел селекционный отбор</h3>
+                                        </a>
+                                        <span class="events-item-date">12 декабря</span>
+                                        <a href="#" class="events-item-btn">
+                                            Записаться
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div> <div class="slider__item">
+                                <div class="events-item">
+                                    <img src="images/slider/test1.png"/>
+                                    <div class="events-item-info">
+                                        <a href="event-item.html">
+                                            <h3 class="events-item-title">Прошел селекционный отбор</h3>
+                                        </a>
+                                        <span class="events-item-date">12 декабря</span>
+                                        <a href="#" class="events-item-btn">
+                                            Записаться
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div> <div class="slider__item">
+                                <div class="events-item">
+                                    <img src="images/slider/test1.png"/>
+                                    <div class="events-item-info">
+                                        <a href="event-item.html">
+                                            <h3 class="events-item-title">Прошел селекционный отбор</h3>
+                                        </a>
+                                        <span class="events-item-date">12 декабря</span>
+                                        <a href="#" class="events-item-btn">
+                                            Записаться
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div> <div class="slider__item">
+                                <div class="events-item">
+                                    <img src="images/slider/test1.png"/>
+                                    <div class="events-item-info">
+                                        <a href="event-item.html">
+                                            <h3 class="events-item-title">Прошел селекционный отбор</h3>
+                                        </a>
+                                        <span class="events-item-date">12 декабря</span>
+                                        <a href="#" class="events-item-btn">
+                                            Записаться
+                                        </a>
+                                    </div>
+
+                                </div>
                             </div>
-                        </a>
-                    </div>
-                    <div class="events-item">
-                        <a href="#" class="">
-                            <img src="images/slider/test1.png" alt="Первый слайд">
-                            <div class="events-item-info">
-                                <h3 class="event-title">Прошел селекционный отбор</h3>
-                                <span class="event-date">12 декабря</span>
-                            </div>
-                        </a>
-                    </div> <div class="events-item">
-                        <a href="#" class="">
-                            <img src="images/slider/test1.png" alt="Первый слайд">
-                            <div class="events-item-info">
-                                <h3 class="event-title">Прошел селекционный отбор</h3>
-                                <span class="event-date">12 декабря</span>
-                            </div>
-                        </a>
-                    </div>
 
 
+                        </div>
+                    </div>
+                    <a class="slider__control slider__control_left" href="#" role="button"></a>
+                    <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
                 </div>
             </div>
         </div>
@@ -146,11 +192,11 @@
 
 </div>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/slick.js"></script>
-<script src="lib/onepage-scroll/jquery.onepage-scroll.min.js"></script>
-<script src="lib/select2/js/select2.full.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="lib/onepage-scroll/jquery.onepage-scroll.min.js"></script>
+    <script src="lib/select2/js/select2.full.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
