@@ -1,0 +1,43 @@
+include ./includes/_mixins.jade
+
+doctype
+html
+    +head('Наши мероприятия')
+    body
+        include includes/_navbar.jade
+        div.wrap
+            section.columns
+                .column.column-2
+                    .column-content
+                        h1 Наши
+                            span мероприятия
+                        form(action='#')
+                            .form-group
+                                select.select2(placeholder='Гражданство')
+                                    option РФ
+                                    option Украина
+                                    option Белорусь
+                            .row
+                                .col-md-6.form-group
+                                    select.select2(placeholder='Год')
+                                        option 2019
+                                        option 2018
+                                        option 2017
+                                        option 2016
+                                        option 2015
+                                .col-md-6.form-group
+                                    select.select2(placeholder='Месяц')
+                                        each val, index in monthList
+                                            option(value= index)=val
+
+
+                .column.column-3
+                    .slider-content
+                        .slider.events
+                            .slider-wrapper
+                                 - for ( var i=1; i<11; i++)
+                                    +eventsItem('Прошел селекционный отбор', '1' + i + ' декабря')
+                        a.slider-control.slider-control_left.arrow.arrow-prev(href='#' role='button')
+                        a.slider-control.slider-control_right.arrow.arrow-next.slider-control_show(href='#' role='button')
+
+        include includes/_footer.jade

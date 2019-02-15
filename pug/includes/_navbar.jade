@@ -1,0 +1,19 @@
+include _mixins.jade
+include _options.jade
+
+nav.navbar
+    .container-fluid
+        .navbar-header
+            button.navbar-toggle.collapsed.hamburger.hamburger--collapse(type='button' data-toggle='collapse' data-target='#top-menu' aria-expanded='false')
+                span.hamburger-box
+                    span.hamburger-inner
+            a.navbar-brand(href='index.html')
+                img(src='images/logo_new.svg' alt='Azess')
+        #top-menu.collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
+                each title, link in topMenu
+                    +nav-item(link, title)
+                li
+                    a(href='#' data-toggle='modal-contact' data-url='contact.html' data-container='.main-slide')= 'Контакты'
+                li
+                    a(href='#')= 'EN'

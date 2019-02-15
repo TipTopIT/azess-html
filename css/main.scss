@@ -1,273 +1,88 @@
 
 $animate-block-duration : 750ms;
-
-
 $color-primary: #199D97;
 
-:root{
-    --icon-next: url("data:image/svg+xml,%3Csvg width='38' height='26' viewBox='0 0 38 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M37.2374 14.2374C37.9209 13.554 37.9209 12.446 37.2374 11.7626L26.1005 0.625629C25.4171 -0.0577882 24.309 -0.0577881 23.6256 0.625629C22.9422 1.30905 22.9422 2.41709 23.6256 3.1005L33.5251 13L23.6256 22.8995C22.9422 23.5829 22.9422 24.6909 23.6256 25.3744C24.309 26.0578 25.4171 26.0578 26.1005 25.3744L37.2374 14.2374ZM2 14.75L36 14.75L36 11.25L2 11.25L2 14.75Z' fill='white'/%3E%3Ccircle cx='2' cy='13' r='1' fill='white' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E%0A");
-    --icon-prev: url("data:image/svg+xml,%3Csvg width='38' height='26' viewBox='0 0 38 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.762563 14.2374C0.0791456 13.554 0.0791457 12.446 0.762563 11.7626L11.8995 0.625629C12.5829 -0.0577882 13.691 -0.0577881 14.3744 0.625629C15.0578 1.30905 15.0578 2.41709 14.3744 3.1005L4.47487 13L14.3744 22.8995C15.0578 23.5829 15.0578 24.6909 14.3744 25.3744C13.691 26.0578 12.5829 26.0578 11.8995 25.3744L0.762563 14.2374ZM36 14.75L2 14.75L2 11.25L36 11.25L36 14.75Z' fill='white'/%3E%3Ccircle r='1' transform='matrix(-1 0 0 1 36 13)' fill='white' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E");
-    --icon-dropdown: url("data:image/svg+xml,%3Csvg width='19' height='11' viewBox='0 0 19 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L9.13649 9.61511C9.3338 9.82403 9.66539 9.82488 9.8627 9.61596C11.0961 8.30997 15.2069 3.9574 18 1' stroke='%2373858B'/%3E%3C/svg%3E%0A");
-    --icon-close: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L25 25M1 1L25 25' stroke='%23C3C3C3'/%3E%3Cpath d='M1 25L25 0.999999M1 25L25 0.999999' stroke='%23C3C3C3'/%3E%3C/svg%3E");
-    --icon-loader: url("data:image/svg+xml,%3Csvg width='200px' height='200px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid' class='lds-facebook' style='background: none;'%3E%3Crect ng-attr-x='%7B%7Bconfig.x1%7D%7D' ng-attr-y='%7B%7Bconfig.y%7D%7D' ng-attr-width='%7B%7Bconfig.width%7D%7D' ng-attr-height='%7B%7Bconfig.height%7D%7D' ng-attr-fill='%7B%7Bconfig.c1%7D%7D' x='17.5' y='30' width='15' height='40' fill='%23ffffff'%3E%3Canimate attributeName='y' calcMode='spline' values='18;30;30' keyTimes='0;0.5;1' dur='1' keySplines='0 0.5 0.5 1;0 0.5 0.5 1' begin='-0.2s' repeatCount='indefinite'%3E%3C/animate%3E%3Canimate attributeName='height' calcMode='spline' values='64;40;40' keyTimes='0;0.5;1' dur='1' keySplines='0 0.5 0.5 1;0 0.5 0.5 1' begin='-0.2s' repeatCount='indefinite'%3E%3C/animate%3E%3C/rect%3E%3Crect ng-attr-x='%7B%7Bconfig.x2%7D%7D' ng-attr-y='%7B%7Bconfig.y%7D%7D' ng-attr-width='%7B%7Bconfig.width%7D%7D' ng-attr-height='%7B%7Bconfig.height%7D%7D' ng-attr-fill='%7B%7Bconfig.c2%7D%7D' x='42.5' y='29.8914' width='15' height='40.2172' fill='%23ffffff'%3E%3Canimate attributeName='y' calcMode='spline' values='20.999999999999996;30;30' keyTimes='0;0.5;1' dur='1' keySplines='0 0.5 0.5 1;0 0.5 0.5 1' begin='-0.1s' repeatCount='indefinite'%3E%3C/animate%3E%3Canimate attributeName='height' calcMode='spline' values='58.00000000000001;40;40' keyTimes='0;0.5;1' dur='1' keySplines='0 0.5 0.5 1;0 0.5 0.5 1' begin='-0.1s' repeatCount='indefinite'%3E%3C/animate%3E%3C/rect%3E%3Crect ng-attr-x='%7B%7Bconfig.x3%7D%7D' ng-attr-y='%7B%7Bconfig.y%7D%7D' ng-attr-width='%7B%7Bconfig.width%7D%7D' ng-attr-height='%7B%7Bconfig.height%7D%7D' ng-attr-fill='%7B%7Bconfig.c3%7D%7D' x='67.5' y='29.5663' width='15' height='40.8675' fill='%23ffffff'%3E%3Canimate attributeName='y' calcMode='spline' values='24;30;30' keyTimes='0;0.5;1' dur='1' keySplines='0 0.5 0.5 1;0 0.5 0.5 1' begin='0s' repeatCount='indefinite'%3E%3C/animate%3E%3Canimate attributeName='height' calcMode='spline' values='52;40;40' keyTimes='0;0.5;1' dur='1' keySplines='0 0.5 0.5 1;0 0.5 0.5 1' begin='0s' repeatCount='indefinite'%3E%3C/animate%3E%3C/rect%3E%3C/svg%3E");
+@import "sass/_fonts";
+@import "sass/_icons";
+@import "sass/_default";
+@import "sass/_columns";
+@import "sass/_modal";
+@import "sass/_navbar";
+@import "sass/_slider";
+
+
+.columns{
+
+  @media(min-width: 1024px){
+    padding-top: 176px;
+  }
+
+  @media(min-width: 1280px){
+    padding-top: 246px;
+  }
+
+  @media(min-width: 1680px) {
+    padding-top: 200px;
+  }
 }
 
 
-
-textarea:hover,
-input:hover,
-textarea:active,
-input:active,
-textarea:focus,
-input:focus,
-button:focus,
-button:active,
-button:hover,
-label:focus,
-.btn:active,
-.btn.active
-{
-    outline:none;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('../fonts/OpenSans/OpenSans-Light.eot');
-    src:  url('../fonts/OpenSans/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/OpenSans/OpenSans-Light.woff') format('woff'),
-    url('../fonts/OpenSans/OpenSans-Light.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src:  url('../fonts/OpenSans/OpenSans-Regular.eot');
-    src:  url('../fonts/OpenSans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/OpenSans/OpenSans-Regular.woff') format('woff'),
-    url('../fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src:  url('../fonts/OpenSans/OpenSans-SemiBold.eot');
-    src:  url('../fonts/OpenSans/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/OpenSans/OpenSans-SemiBold.woff') format('woff'),
-    url('../fonts/OpenSans/OpenSans-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src:  url('../fonts/OpenSans/OpenSans-Bold.eot');
-    src:  url('../fonts/OpenSans/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/OpenSans/OpenSans-Bold.woff') format('woff'),
-    url('../fonts/OpenSans/OpenSans-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-
-html,body{
-    background-color: #000;
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
-    color: #ffffff;
-    font-family: "Open Sans", "sans-serif";
-    font-size: 16px;
-}
-
-a{
-    color: #ffffff;
-
-    &:hover{
-        color: #ffffff;
-        text-decoration: none;
-    }
-
-}
 
 .btn{
-    font-size: 16px;
-    border: none;
-    border-radius: 0px;
-    position: relative;
-    z-index: 1;
+  font-size: 16px;
+  border: none;
+  border-radius: 0px;
+  position: relative;
+  z-index: 1;
 
+  &:before{
+    position: absolute;
+    background: #0a0a0a;
+    width: 0%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    content: ' ';
+    z-index: -1;
+    transition: width 300ms;
+  }
+
+  &:hover:before{
+    width: 100%;
+  }
+
+  .btn-default{
+    background-color: #fff;
+  }
+
+  &.btn-lg{
+    border-radius: 40px;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 25px 82px;
+  }
+
+  &.btn-primary{
+    background-color: transparent;
     &:before{
-        position: absolute;
-        background: #0a0a0a;
-        width: 0%;
-        height: 100%;
-        top: 0px;
-        left: 0px;
-        content: ' ';
-        z-index: -1;
-        transition: width 300ms;
+      position: absolute;
+      background-color: #199D97;
     }
+
+  }
+
+  &.btn-active{
+    font-weight: bold;
+    background-color: transparent;
 
     &:hover:before{
-        width: 100%;
-    }
-
-    .btn-default{
-        background-color: #fff;
-    }
-
-    &.btn-lg{
-        border-radius: 40px;
-        font-size: 18px;
-        text-transform: uppercase;
-        padding: 25px 82px;
+      width: 0px;
     }
 
     &.btn-primary{
-        background-color: transparent;
-        &:before{
-            position: absolute;
-            background-color: #199D97;
-        }
-
+      color: #199D97;
     }
-
-    &.btn-active{
-        font-weight: bold;
-        background-color: transparent;
-
-        &:hover:before{
-            width: 0px;
-        }
-
-        &.btn-primary{
-            color: #199D97;
-        }
-    }
-
-}
-
-
-
-header{
-
-    &.top-menu-open{
-        height: 100%;
-    }
-
-}
-
-body.modal-open{
-
-    header{
-        width: 50%;
-        overflow: hidden;
-
-        nav{
-            width: 50%;
-            .nav{
-                display: none;
-            }
-        }
-
-    }
-
-}
-
-nav.navbar {
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    z-index: 110;
-    margin: 0px;
-    border: none;
-
-    @media (min-width: 1920px) {
-        padding-top: 3.5rem;
-        padding-left: 4.18em;
-        padding-right: 30px;
-    }
-
-    @media (max-width: 768px) {
-        .navbar-header {
-            padding: 30px 20px 0px 20px;
-        }
-    }
-
-    .hamburger{
-        display: none;
-
-        @media (max-width: 768px) {
-            display: inline;
-        }
-
-    }
-
-    .navbar-toggle{
-        margin: 0px;
-        padding: 0px;
-
-    }
-
-    .icon-bar{
-        background-color: #fff;
-    }
-
-    div.navbar-header{
-        a.navbar-brand{
-            padding: 0px;
-            margin: 0px;
-            @media (max-width: 768px) {
-                padding-top: 4px;
-            }
-        }
-    }
-
-    ul{
-        li {
-            font-size: 13px;
-            text-transform: uppercase;
-            padding: 0px 15px;
-
-            @media (max-width: 768px) {
-               padding: 20px 20px 20px 40px;
-            }
-
-            a{
-                padding: 4px 10px;
-                position: relative;
-                display: block;
-                z-index: 1;
-
-                transition: color 50ms;
-                transition-delay: 50ms;
-
-                &:before{
-                    position: absolute;
-                    box-sizing: border-box;
-                    background: #ffffff;
-                    width: 0%;
-                    height: 100%;
-                    top: 0px;
-                    left: 0px;
-                    content: '';
-                    z-index: -1;
-                    transition: width 100ms;
-
-                }
-
-                &:hover{
-                    background: transparent;
-                    color: #000000;
-                    &:before{
-                        width: 100%;
-                    }
-                }
-
-            }
-        }
-    }
+  }
 }
 
 section{
@@ -296,8 +111,6 @@ section{
             }
 
             .box-links{
-
-
                 width: 100%;
                 position: absolute;
                 left: 0px;
@@ -357,26 +170,19 @@ section{
     }
 
     &.content-list{
-
         &>div{
-
-
             &:first-child{
                 flex: 2;
                 width: 40%;
             }
-
             &:last-child{
                 flex: 3;
                 width: 60%;
-
                 .box-content{
                     padding-left: 0px;
                     padding-right: 0px;
                 }
-
             }
-
         }
     }
 
@@ -933,21 +739,24 @@ section{
 
 .events {
 
-    padding-right: 0px !important;
-   // margin-right: -250px;
-    position: relative;
+
 
 
     .events-item{
         position: relative;
-        display: inline-block;
-        box-sizing: border-box;
+
         border: 1px solid #333333;
         overflow: hidden;
+        display: inline-block;
+        margin-right: 40px;
 
         &:last-child{
             margin-right: 0px;
         }
+
+      img{
+        max-width: 100%;
+      }
 
         .events-item-info{
             position: absolute;
@@ -985,15 +794,8 @@ section{
                 line-height: 40px;
                 text-align: center;
                 text-transform: uppercase;
-
-
-
-
             }
         }
-
-
-
 
         &:after{
             display: block;
@@ -1223,6 +1025,93 @@ section{
 .peoples{
     padding-left: 150px;
 }
+
+.players{
+
+    .players-item{
+
+        display: inline-block;
+        padding-right: 40px;
+        position: relative;
+
+      &:after {
+        content: ' ';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+        img{
+            max-width: 100%;
+        }
+
+        .players-item-info{
+            position: absolute;
+            min-height: 150px;
+            bottom: 0px;
+            padding: 0px 50px;
+        }
+
+        .players-item-name{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 30px;
+            margin: 0px 0px 30px 0px;
+
+            span{
+                display: block;
+            }
+
+        }
+        .players-item-club{
+            font-size: 18px;
+            letter-spacing: 0.04em;
+            color: #E1EAED;
+            font-weight: 100;
+        }
+
+
+
+    }
+
+}
+
+.news {
+
+  .news-item {
+
+    display: inline-block;
+    padding-right: 40px;
+    position: relative;
+
+    img{
+      max-width: 100%;
+    }
+
+    &:after {
+      content: ' ';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .news-item-info{
+      position: absolute;
+      min-height: 150px;
+      bottom: 0px;
+      padding: 0px 50px;
+    }
+
+  }
+
+}
+
 
 .select2-dropdown{
     border-color: #E5E5E5;

@@ -1,0 +1,46 @@
+include _mixins.jade
+
+h3 Начни работать с нами
+.box-form
+    form(action='#' method='post')
+        +form-group('name', 'ФИО')
+        .row
+            .col-md-6
+                +form-group('birthday', 'Дата рождения')
+            .col-md-6
+                +form-group('birthday', 'E-mail')
+        .row
+            .col-md-6.form-group
+                select.select2(name='city' placeholder='Город')
+                    option(value='1') &Rcy;&ocy;&scy;&scy;&icy;&jcy;&scy;&kcy;&acy;&yacy; &Fcy;&iecy;&dcy;&iecy;&rcy;&acy;&tscy;&icy;&yacy;
+                    option(value='2') &Bcy;&iecy;&lcy;&ocy;&rcy;&ucy;&scy;&softcy;
+                    option(value='3') &Kcy;&acy;&zcy;&acy;&khcy;&scy;&tcy;&acy;&ncy;
+                    option(value='4') &Ucy;&kcy;&rcy;&acy;&icy;&ncy;&scy;&kcy;&acy;&yacy; &rcy;&iecy;&scy;&pcy;&ucy;&bcy;&lcy;&icy;&kcy;&acy;
+            .col-md-6.form-group
+                select.select2(placeholder='Роль')
+                    option &Vcy;&rcy;&acy;&tcy;&acy;&rcy;&softcy;
+                    option &Ncy;&acy;&pcy;&acy;&dcy;&acy;&yucy;&shchcy;&icy;&jcy;
+                    option &Zcy;&acy;&shchcy;&icy;&tcy;&ncy;&icy;&kcy;
+                    option &CHcy;&iecy;&rcy;&chcy;&iecy;&scy;&ocy;&vcy;
+        .form-group
+            input.form-control(type='text' placeholder='Футбольный клуб (ДЮСШ)')
+        .row
+            .col-md-3.form-group
+                input.form-control(type='text' placeholder='Рост')
+            .col-md-3.form-group
+                input.form-control(type='text' placeholder='Вес')
+            .col-md-6.form-group
+                select.select2(placeholder='Нога')
+                    option &Lcy;&iecy;&vcy;&acy;&yacy; &ncy;&ocy;&gcy;&acy;
+                    option &Pcy;&rcy;&acy;&vcy;&acy;&yacy; &ncy;&ocy;&gcy;&acy;
+        .form-group
+            input.form-control(type='text' placeholder='Образование')
+        .form-group
+            input.form-control(placeholder='Достижения')
+        .form-group
+            input.form-control(placeholder='Дополнительные сведения')
+        .form-group
+            input(type='file' name='file' placeholder='Прикрепить резюме')
+        .text-right
+            button.btn.btn-default.animated-bg(type='submit' id='') &Ocy;&tcy;&pcy;&rcy;&acy;&vcy;&icy;&tcy;&softcy;
+

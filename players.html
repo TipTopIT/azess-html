@@ -1,83 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Azess - Футболисты</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
+<html>
+  <head>
+    <title>Azess - Наши футболисты</title>
+    <meta charset="utf8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/hamburger.css" rel="stylesheet"/>
-    <link href="css/slider.css" rel="stylesheet">
-    <link href="lib/onepage-scroll/onepage-scroll.css" rel="stylesheet">
-    <link href="lib/select2/css/select2.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css"/>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
-
-<header>
+    <link href="lib/onepage-scroll/onepage-scroll.css" rel="stylesheet"/>
+    <link href="lib/select2/css/select2.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet"/>
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="container-fluid">
-
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed hamburger hamburger--collapse"
-                        data-toggle="collapse" data-target="#top-menu"
-                        aria-expanded="false">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-
-                </button>
-                <a class="navbar-brand" href="index.html"><img src="images/logo_new.svg" alt="Azess"></a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="top-menu">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="events.html">Наши мероприятия</a>
-                    </li>
-                    <li>
-                        <a href="players.html">Футболисты</a>
-                    </li>
-                    <li>
-                        <a href="news.html">Новости</a>
-                    </li>
-                    <li>
-                        <a href="contacts.html">Контакты</a>
-                    </li>
-                    <li>
-                        <a href="#">RU</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed hamburger hamburger--collapse" type="button" data-toggle="collapse" data-target="#top-menu" aria-expanded="false"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><a class="navbar-brand" href="index.html"><img src="images/logo_new.svg" alt="Azess"></a>
         </div>
+        <div class="collapse navbar-collapse" id="top-menu">
+          <ul class="nav navbar-nav navbar-right">
+                <li><a href="events.html">Наши мероприятия</a></li>
+                <li><a href="players.html">Футболисты</a></li>
+                <li><a href="news.html">Новости</a></li>
+            <li><a href="#" data-toggle="modal-contact" data-url="contact.html" data-container=".main-slide">Контакты</a></li>
+            <li><a href="#">EN</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-</header>
-
-<div class="wrap">
-    <section class="content-list">
-        <div class="box">
-            <div class="box-content peoples">
-                    <h1>Футболисты <span>нашего агентства</span></h1>
-            </div>
+    <div class="wrap">
+      <section class="columns">
+        <div class="column column-2">
+          <div class="column-content">
+            <h1>Наши<span>футболисты</span></h1>
+          </div>
         </div>
-    </section>
-
-</div>
-
+        <div class="column column-3">
+          <div class="slider-content">
+            <div class="slider players">
+              <div class="slider-wrapper">
+                    <div class="slider-item">
+                      <div class="players-item"><img src="images/players/img_2.png">
+                        <div class="players-item-info"><a href="player-item.html">
+                            <h3 class="players-item-name">Игорь<span>Акинфеев</span></h3>
+                            <div class="players-item-club">ФК Спартак</div></a></div>
+                      </div>
+                    </div>
+                    <div class="slider-item">
+                      <div class="players-item"><img src="images/players/img_3.png">
+                        <div class="players-item-info"><a href="player-item.html">
+                            <h3 class="players-item-name">Игорь<span>Акинфеев</span></h3>
+                            <div class="players-item-club">ФК Спартак</div></a></div>
+                      </div>
+                    </div>
+                    <div class="slider-item">
+                      <div class="players-item"><img src="images/players/img_2.png">
+                        <div class="players-item-info"><a href="player-item.html">
+                            <h3 class="players-item-name">Игорь<span>Акинфеев</span></h3>
+                            <div class="players-item-club">ФК Спартак</div></a></div>
+                      </div>
+                    </div>
+                    <div class="slider-item">
+                      <div class="players-item"><img src="images/players/img_2.png">
+                        <div class="players-item-info"><a href="player-item.html">
+                            <h3 class="players-item-name">Игорь<span>Акинфеев</span></h3>
+                            <div class="players-item-club">ФК Спартак</div></a></div>
+                      </div>
+                    </div>
+                    <div class="slider-item">
+                      <div class="players-item"><img src="images/players/img_1.png">
+                        <div class="players-item-info"><a href="player-item.html">
+                            <h3 class="players-item-name">Игорь<span>Акинфеев</span></h3>
+                            <div class="players-item-club">ФК Спартак</div></a></div>
+                      </div>
+                    </div>
+                    <div class="slider-item">
+                      <div class="players-item"><img src="images/players/img_3.png">
+                        <div class="players-item-info"><a href="player-item.html">
+                            <h3 class="players-item-name">Игорь<span>Акинфеев</span></h3>
+                            <div class="players-item-club">ФК Спартак</div></a></div>
+                      </div>
+                    </div>
+                    <div class="slider-item">
+                      <div class="players-item"><img src="images/players/img_1.png">
+                        <div class="players-item-info"><a href="player-item.html">
+                            <h3 class="players-item-name">Игорь<span>Акинфеев</span></h3>
+                            <div class="players-item-club">ФК Спартак</div></a></div>
+                      </div>
+                    </div>
+                    <div class="slider-item">
+                      <div class="players-item"><img src="images/players/img_1.png">
+                        <div class="players-item-info"><a href="player-item.html">
+                            <h3 class="players-item-name">Игорь<span>Акинфеев</span></h3>
+                            <div class="players-item-club">ФК Спартак</div></a></div>
+                      </div>
+                    </div>
+                    <div class="slider-item">
+                      <div class="players-item"><img src="images/players/img_1.png">
+                        <div class="players-item-info"><a href="player-item.html">
+                            <h3 class="players-item-name">Игорь<span>Акинфеев</span></h3>
+                            <div class="players-item-club">ФК Спартак</div></a></div>
+                      </div>
+                    </div>
+                    <div class="slider-item">
+                      <div class="players-item"><img src="images/players/img_3.png">
+                        <div class="players-item-info"><a href="player-item.html">
+                            <h3 class="players-item-name">Игорь<span>Акинфеев</span></h3>
+                            <div class="players-item-club">ФК Спартак</div></a></div>
+                      </div>
+                    </div>
+              </div>
+            </div><a class="slider-control slider-control_left arrow arrow-prev" href="#" role="button"></a><a class="slider-control slider-control_right arrow arrow-next slider-control_show" href="#" role="button"></a>
+          </div>
+        </div>
+      </section>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/slider.js"></script>
     <script src="lib/onepage-scroll/jquery.onepage-scroll.min.js"></script>
     <script src="lib/select2/js/select2.full.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-</body>
+    <script src="js/slider.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+  </body>
 </html>

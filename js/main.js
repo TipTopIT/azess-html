@@ -1,31 +1,24 @@
 $(function(){
 
+    $(".wrap").onepage_scroll({
+        sectionContainer: "section",
+        easing: "ease-in",
+        animationTime: 500,
+        pagination: false,
+        updateURL: true,
+        loop: true,
+        keyboard: true,
+        responsiveFallback: false,
+        direction: "horizontal",
+        afterMove: function (index) {
+            let section = $(".wrap").children().eq(index - 1);
 
-  // $('.animate-block').addClass('animate-block-active');
-
-    // scroll page
-
-  //  if($(".wrap section").length > 1) {
-        $(".wrap").onepage_scroll({
-            sectionContainer: "section",
-            easing: "ease-in",
-            animationTime: 500,
-            pagination: false,
-            updateURL: true,
-            loop: true,
-            keyboard: true,
-            responsiveFallback: false,
-            direction: "horizontal",
-            afterMove: function (index) {
-                let section = $(".wrap").children().eq(index - 1);
-
-                if (section.hasClass('animate-block') && !section.hasClass('animate-block-active')) {
-                    section.addClass('animate-block-active');
-                }
-
+            if (section.hasClass('animate-block') && !section.hasClass('animate-block-active')) {
+                section.addClass('animate-block-active');
             }
-        });
-  //  }
+
+        }
+    });
 
     if($(".wrap section:first-child").hasClass('animate-block')){
         $(".wrap section:first-child").addClass('animate-block-active');
@@ -106,6 +99,15 @@ $(function(){
         $('body').addClass('modal-open');
     });
 
+    $('[data-toggle="modal-contact"]').on('click',function () {
+        let btn = $(this),
+            url = btn.data('url'),
+            container = $(btn.data('container'));
+
+        $('#modal-contact').addClass('box-modal-active');
+        $('body').addClass('modal-open');
+    });
+
     $('body').on('click','.modal-btn-close',function () {
         let btn = $(this),
             modal = btn.closest('.box-modal');
@@ -115,9 +117,6 @@ $(function(){
         return false;
     });
 
-    $('body').on('wheel','.box-form',function (event) {
-
-    });
 
     multiItemSlider('.slider');
 

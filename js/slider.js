@@ -3,18 +3,18 @@ var multiItemSlider = (function () {
     return function (selector) {
         let
             _mainElement = document.querySelector(selector), // основный элемент блока
-            _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
-            _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
-            _sliderControls = document.querySelectorAll('.slider__control'), // элементы управления
-            _sliderControlLeft = document.querySelector('.slider__control_left'), // кнопка "LEFT"
-            _sliderControlRight = document.querySelector('.slider__control_right'), // кнопка "RIGHT"
+            _sliderWrapper = _mainElement.querySelector('.slider-wrapper'), // обертка для .slider-item
+            _sliderItems = _mainElement.querySelectorAll('.slider-item'), // элементы (.slider-item)
+            _sliderControls = document.querySelectorAll('.slider-control'), // элементы управления
+            _sliderControlLeft = document.querySelector('.slider-control_left'), // кнопка "LEFT"
+            _sliderControlRight = document.querySelector('.slider-control_right'), // кнопка "RIGHT"
             _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
             _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента
             _positionLeftItem = 0, // позиция левого активного элемента
             _transform = 0, // значение трансформации .slider_wrapper
             _step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
             _items = []; // массив элементов
-
+        console.log(_sliderWrapper);
         // наполнение массива _items
         _sliderItems.forEach(function (item, index) {
             _items.push({ item: item, position: index, transform: 0 });
@@ -30,11 +30,11 @@ var multiItemSlider = (function () {
                 if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
                     return;
                 }
-                if (!_sliderControlLeft.classList.contains('slider__control_show')) {
-                    _sliderControlLeft.classList.add('slider__control_show');
+                if (!_sliderControlLeft.classList.contains('slider-control_show')) {
+                    _sliderControlLeft.classList.add('slider-control_show');
                 }
-                if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
-                    _sliderControlRight.classList.remove('slider__control_show');
+                if (_sliderControlRight.classList.contains('slider-control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+                    _sliderControlRight.classList.remove('slider-control_show');
                 }
                 _positionLeftItem++;
                 _transform -= _step;
@@ -43,11 +43,11 @@ var multiItemSlider = (function () {
                 if (_positionLeftItem <= position.getMin) {
                     return;
                 }
-                if (!_sliderControlRight.classList.contains('slider__control_show')) {
-                    _sliderControlRight.classList.add('slider__control_show');
+                if (!_sliderControlRight.classList.contains('slider-control_show')) {
+                    _sliderControlRight.classList.add('slider-control_show');
                 }
-                if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
-                    _sliderControlLeft.classList.remove('slider__control_show');
+                if (_sliderControlLeft.classList.contains('slider-control_show') && _positionLeftItem - 1 <= position.getMin) {
+                    _sliderControlLeft.classList.remove('slider-control_show');
                 }
                 _positionLeftItem--;
                 _transform += _step;
@@ -57,7 +57,7 @@ var multiItemSlider = (function () {
 
         // обработчик события click для кнопок "назад" и "вперед"
         let _controlClick = function () {
-            let direction = this.classList.contains('slider__control_right') ? 'right' : 'left';
+            let direction = this.classList.contains('slider-control_right') ? 'right' : 'left';
             _transformItem(direction);
         };
 

@@ -1,0 +1,16 @@
+body.modal-open{
+
+  header{
+    width: 50%;
+    overflow: hidden;
+
+    nav{
+      width: 50%;
+      .nav{
+        display: none;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,23 @@
+include ./includes/_mixins.jade
+
+doctype
+html
+    +head('Наши футболисты')
+    body
+        include includes/_navbar.jade
+        div.wrap
+            section.columns
+                .column.column-2
+                    .column-content
+                        h1 Наши
+                            span футболисты
+                .column.column-3
+                    .slider-content
+                        .slider.players
+                            .slider-wrapper
+                                 - for ( var i=0; i<10; i++)
+                                    +playerItem('Игорь Акинфеев')
+                        a.slider-control.slider-control_left.arrow.arrow-prev(href='#' role='button')
+                        a.slider-control.slider-control_right.arrow.arrow-next.slider-control_show(href='#' role='button')
+
+        include includes/_footer.jade

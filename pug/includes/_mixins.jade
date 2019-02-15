@@ -1,0 +1,63 @@
+include _options.jade
+
+mixin head(title)
+    head
+        title Azess - #{title}
+        meta(charset='utf8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(href='css/bootstrap.min.css' rel='stylesheet')
+        link(href='css/hamburger.css' rel='stylesheet')
+        link(href='lib/onepage-scroll/onepage-scroll.css' rel='stylesheet')
+        link(href='lib/select2/css/select2.css' rel='stylesheet')
+        link(href='css/main.css' rel='stylesheet')
+
+mixin nav-item(link, title)
+    li
+        a(href= link )=title
+
+mixin form-group(name, label, type="text", error = false, message = '')
+    case error
+        when true
+            .form-group.has-error
+                input.form-control(name=name type= type placeholder=label)
+                span.help-block=message
+        when false: .form-group
+                input.form-control(name=name type= type placeholder=label)
+                span.help-block
+
+mixin slider-item(content)
+    .slider-item
+        #{content}
+
+mixin eventsItem(name, date)
+    .slider-item
+        .events-item
+            img(src='images/slider/test1.png')
+            .events-item-info
+                a(href='event-item.html')
+                    h3.events-item-title= name
+                span.events-item-date= date
+                a.events-item-btn(href='#') Записаться
+
+mixin playerItem(name)
+    - var n = Math.floor(Math.random() * (4 - 1)) + 1;
+    - var name = name.split(' ');
+    .slider-item
+        .players-item
+            img(src='images/players/img_' + n + '.png')
+            .players-item-info
+                a(href='player-item.html')
+                    h3.players-item-name= name[0]
+                        span= name[1]
+                    div.players-item-club= 'ФК Спартак'
+
+mixin newsItem(name, date)
+    - var n = Math.floor(Math.random() * (4 - 1)) + 1;
+    .slider-item
+        .news-item
+            img(src='images/players/img_' + n + '.png')
+            .news-item-info
+                a(href='player-item.html')
+                    h3.news-item-title= name
+                    span.date= date

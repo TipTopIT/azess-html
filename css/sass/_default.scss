@@ -1,0 +1,82 @@
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+  outline:none;
+}
+
+html,body{
+  background-color: #000;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  color: #ffffff;
+  font-family: "Open Sans", "sans-serif";
+  font-size: 16px;
+}
+
+a{
+  color: #ffffff;
+  &:hover, &:focus{
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+
+
+h1 {
+
+  line-height: 1em;
+  margin: 0px;
+  font-weight: 400;
+
+  @media(min-width: 768px) {
+    font-size: 72px;
+  }
+
+  @media(min-width: 1024px) {
+    font-size: 90px;
+  }
+
+  @media(min-width: 1440px) {
+    font-size: 100px;
+  }
+
+  @media(min-width: 1680px) {
+    font-size: 120px;
+  }
+
+  span {
+    display: block;
+
+    @media(min-width: 768px) {
+      font-size: 38px;
+    }
+
+    @media(min-width: 1024px) {
+      font-size: 50px;
+    }
+
+    @media(min-width: 1440px) {
+      font-size: 58px;
+    }
+
+    @media(min-width: 1680px) {
+      font-size: 66px;
+    }
+
+
+  }
+
+}
